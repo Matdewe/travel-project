@@ -40,7 +40,7 @@ Open index.html
 
 ## Screenshot
 
-Screenshot goes here
+Screenshot goes here 
 
 ## Customization
 

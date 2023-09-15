@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#home">
+          <h1 class="title">Travel & Activities</h1>
+        </a>
+      </div>
+      
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#home">Home</a>
+          <a class="navbar-item" href="#destinations">Destinations</a>
+          <a class="navbar-item" href="#activities">Activities</a>
+          <a class="navbar-item" href="#contact">Contact us</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Home Section -->
+    <section>
+      <h2>Home</h2>
+      <p>text</p>
+      <p>text</p>
+    </section>
+
+    <!-- destinations section -->
+    <section id="destinations">
+      <h2>Fun Destinations</h2>
+      <p>text</p>
+      <p>text</p>
+      <img src="image goes here" alt="" />
+      <img src="image goes here" alt="" />
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities">
+      <h2>Activities</h2>
+      <p>text here</p>
+      <p>text here</p>
+      <ul>
+        <li>hiking</li>
+        <li>skiing</li>
+        <li>swimming</li>
+      </ul>
+    </section>
+
+    <!-- Contact us Section -->
+    <section id="contact"></section>
+    <h2>Contact Us</h2>
+
+    <form action="/submit" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" /><br />
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" /><br />
+
+      <label for="message">Message</label>
+      <textarea name="message" id="message" cols="30" rows="10"></textarea
+      ><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+    <script src="/Assets/script.js"></script>
+  </body>
 </html>

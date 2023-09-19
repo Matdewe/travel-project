@@ -10,10 +10,10 @@
     <nav class="navbar is-link">
       <div class="container">
         <div class="navbar-brand">
-          <a class="navbar-item" href="#" style="font-weight:bold;">
+          <a class="navbar-item" href="#Home" style="font-weight:bold;">
             Seamless Booking
           </a>
-          <span class="navbar-burger" data-target="navbarMenu">
+          <span class="navbar-burger burger" data-target="navbarMenu">
             <span></span>
             <span></span>
             <span></span>
@@ -21,10 +21,10 @@
         </div>
         <div id="navMenu" class="navbar-menu">
           <div class="navbar-start">
-            <a href="#" class="navbar-item is-active">Home</a>
-            <a href="#" class="navbar-item">Hotels</a>
-            <a href="#" class="navbar-item">Destination</a>
-            <a href="#" class="navbar-item">Contact Us</a>
+            <a href="#Home" class="navbar-item is-active">Home</a>
+            <a href="#Hotels" class="navbar-item">Hotels</a>
+            <a href="#Destinations" class="navbar-item">Destination</a>
+            <a href="#Contact" class="navbar-item">Contact Us</a>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
 
 
     <!-- Home Section -->
-    <section>
+    <section id="Home">
       <h2>Home</h2>
       <p>text</p>
       <p>text</p>
@@ -60,23 +60,38 @@
     </section>
 
     <!-- Contact us Section -->
-    <section id="contact" class="contact-form">
-    <h2>Contact Us</h2>
+    <div class="container my-5 mt-5 mx-5 px-5">
+      <h2 class="title is-2 is-capitalized" id="Contact">Contact Us</h2>
 
-    <form action="/submit" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" /><br />
+      <form action="" method="post">
+          <div class="field">
+              <label for="name" class="label is-size-4 has-text-weight-light"></label>
+              <div class="control has-icons-left">
+                  <input type="text" name="name" id="name" class="input" placeholder="Name" autofocus>
+                      <span class="icon is-left">
+                          <i class="fa fa-user"></i>
+                      </span>
+              </div>
+          </div>
 
-      <label for="email">Email:</label>
-      <input type="email" name="email" id="email" /><br />
+          <div class="field">
+              <label for="email" class="label is-size-4 has-text-weight-light"></label>
+              <div class="control has-icons-left">
+                  <input type="email" name="email" id="email" class="input" placeholder="Email">
+                      <span class="icon is-left">
+                          <i class="fa fa-envelope"></i>
+                      </span>
+              </div>
+          </div>
 
-      <label for="message">Message</label>
-      <textarea name="message" id="message" cols="30" rows="10"></textarea
-      ><br /></form>
-      </section>
+          <div class="field">
+              <label for="message" class="label is-size-4 has-text-weight-light"></label>
+              <textarea name="message" id="message" rows="5" class="textarea is-medium" placeholder="Enter Message Here"></textarea>
+          </div>
+          <button type="submit" class="button is-link is-light is-size-10">Submit</button>
+      </form>
+  </div>
 
-      <input type="submit" value="Submit" />
-    </form>
     <script src="/Assets/script.js"></script>
   </body>
 </html>

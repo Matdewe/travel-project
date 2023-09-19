@@ -69,3 +69,7 @@ Open index.html
 * https://www.youtube.com/watch?v=I6nuWeylMYM
 * https://bulma.io/documentation/overview/modifiers/
 * https://bulma.io/documentation/components/navbar/
+* https://www.geeksforgeeks.org/bulma-navbar-burger/ 
+* https://herotofu.com/solutions/forms-library/bulma/simple-contact-form
+* https://bulma.io/documentation/form/general/ 
+* 

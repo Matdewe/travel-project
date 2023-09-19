@@ -1,6 +1,6 @@
 # travel-project
 
-<<<<<<<<< Temporary merge branch 1
+
 At [Your Website Name], we're passionate about helping travelers like you create unforgettable journeys with ease and efficiency. Say goodbye to the days of scrambling through multiple tabs, endless spreadsheets, and sticky notes – we've simplified the art of travel planning.
 
 ##  Table of Contents 
@@ -10,6 +10,7 @@ At [Your Website Name], we're passionate about helping travelers like you create
 - [Startup and Installation](#startup-and-installation)
 - [Screenshot](#screenshot)
 - [Customization](#Customization)
+- [Resources](#resources)
 - [License](#license)
 
 
@@ -49,6 +50,19 @@ cd Travel-Project
 Open index.html
 
 ## Screenshot
+
+Screenshot goes here 
+
+## Customization
+
+add and change whats needed for the following html and css needs. 
+
+## Resources  
+
+https://www.youtube.com/watch?v=NFToND6x_nI
+
+## License
+=======
 
 
 ## Review

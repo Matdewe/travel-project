@@ -63,4 +63,8 @@ Open index.html
 * Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 * add your project to the portfolio that you created in Module 2.
 
+## Sources
+* https://www.youtube.com/watch?v=I6nuWeylMYM
+* 
+
 

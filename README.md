@@ -9,6 +9,7 @@ This is a website for travel and activities
 - [Startup and Installation](#startup-and-installation)
 - [Screenshot](#screenshot)
 - [Customization](#Customization)
+- [Resources](#resources)
 - [License](#license)
 
 ## Features
@@ -45,6 +46,10 @@ Screenshot goes here
 ## Customization
 
 add and change whats needed for the following html and css needs. 
+
+## Resources  
+
+https://www.youtube.com/watch?v=NFToND6x_nI
 
 ## License
 

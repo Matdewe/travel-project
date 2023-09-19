@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fetchDataButton.addEventListener("click", function () {
         // uses fetch for the api to get the data form trip adviser
         fetch(
-            "https://api.content.tripadvisor.com/api/v1/location/search?key=8C74B3260752405CBEE11064D5E2CEE5&searchQuery=Houston&language=en",
+            "https://test.api.amadeus.com/v1/security/oauth2/token",
             options
         )
         // turns it into JSON object
@@ -32,3 +32,4 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+

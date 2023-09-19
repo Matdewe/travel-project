@@ -65,5 +65,6 @@ Open index.html
 * add your project to the portfolio that you created in Module 2.
 =========
 
-## user-stories
->>>>>>>>> Temporary merge branch 2
+## Sources
+* https://www.youtube.com/watch?v=I6nuWeylMYM
+* 

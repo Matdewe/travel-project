@@ -67,4 +67,5 @@ Open index.html
 
 ## Sources
 * https://www.youtube.com/watch?v=I6nuWeylMYM
-* 
+* https://bulma.io/documentation/overview/modifiers/
+* https://bulma.io/documentation/components/navbar/

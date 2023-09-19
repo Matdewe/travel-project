@@ -1,6 +1,6 @@
 # Travel and Activities Website
 
-This is a website for travel and activities
+At [Your Website Name], we're passionate about helping travelers like you create unforgettable journeys with ease and efficiency. Say goodbye to the days of scrambling through multiple tabs, endless spreadsheets, and sticky notes – we've simplified the art of travel planning.
 
 ##  Table of Contents 
 
@@ -39,13 +39,3 @@ cd Travel-Project
 Open index.html
 
 ## Screenshot
-
-Screenshot goes here 
-
-## Customization
-
-add and change whats needed for the following html and css needs. 
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE.md).

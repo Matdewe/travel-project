@@ -1,6 +1,6 @@
 # travel-project
 
-
+<<<<<<<<< Temporary merge branch 1
 At [Your Website Name], we're passionate about helping travelers like you create unforgettable journeys with ease and efficiency. Say goodbye to the days of scrambling through multiple tabs, endless spreadsheets, and sticky notes – we've simplified the art of travel planning.
 
 ##  Table of Contents 
@@ -63,6 +63,8 @@ Open index.html
 * Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id-naming conventions, indentation, quality comments, etc.).
 * Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 * add your project to the portfolio that you created in Module 2.
+=========
 
-## user-stories
-
+## Sources
+* https://www.youtube.com/watch?v=I6nuWeylMYM
+* 

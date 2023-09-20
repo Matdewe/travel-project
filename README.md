@@ -86,4 +86,5 @@ https://www.youtube.com/watch?v=NFToND6x_nI
 * https://www.geeksforgeeks.org/bulma-navbar-burger/ 
 * https://herotofu.com/solutions/forms-library/bulma/simple-contact-form
 * https://bulma.io/documentation/form/general/ 
-* 
+* https://looka.com/editor/149032190 (logo creator)
+

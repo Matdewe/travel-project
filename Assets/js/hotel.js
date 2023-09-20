@@ -1,6 +1,8 @@
-function fetchHotels() {
+const fetchHotels = () => {
+  // gets user input
   const userInput = document.querySelector("#userQuery").value;
-}
+
+
 
 const url =
   "https://hotels4.p.rapidapi.com/locations/v3/search?q=United%20States&locale=en_US&langid=1033&siteid=300000001";
@@ -20,6 +22,11 @@ fetch("https://hotels4.p.rapidapi.com", options)
     return response.json();
   })
   .then((data) => {
+    const resultsDiv = document.querySelector("#results");
+    resultsDiv.innerHTML = JSON.stringify(data);
     console.log(data);
   })
+
   .catch((error) => console.error("Error", error));
+
+};

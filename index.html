@@ -29,7 +29,7 @@
         </div>
         <div id="navMenu" class="navbar-menu">
           <div class="navbar-end">
-            <a href="#Home" class="navbar-item is-active">About Us</a>
+            <a href="#tab-content" class="navbar-item is-active">About Us</a>
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link">
                 More
@@ -38,7 +38,7 @@
               <div class="navbar-dropdown">
             <a href="#Hotels" class="navbar-item">Hotels</a>
             <a href="#Destinations" class="navbar-item">Destination</a>
-            <a href="#Destinations" class="navbar-item">Activities</a>
+            <a href="#Activities" class="navbar-item">Activities</a>
             <a href="#Contact" class="navbar-item">Contact Us</a>
           </div>
 
@@ -57,27 +57,41 @@
      <!-- Tab Bar -->
     <div class="tabs is-centered is-boxed">
       <ul>
-        <li class="is-active"><a>About </a></li>
-        <li><a>Destination</a></li>
-        <li><a>Hotels</a></li>
-        <li><a>Activites</a></li>
-        <li><a>Contact</a></li>
+        <li data-target="About" class="is-active"><a>About </a></li>
+        <li data-target="Destinations"><a>Destination</a></li>
+        <li data-target="Hotels"><a>Hotels</a></li>
+        <li data-target="Activities"><a>Activites</a></li>
+        <li data-target="Contact"><a>Contact</a></li>
       </ul>
     </div>
 
-    <!-- Home Section -->
-    <section id="Home" class="section is-large"  class="container my-5 mt-5 mx-5 px-5">
+     <!-- each tab content Section -->
+    <section id="tab-content" class="section is-small" class="container my-5 mt-5 mx-5 px-5" >
       
       
-      
-      <p>Every traveler is unique, and so are your interests. Customize your itinerary with precision, from sightseeing tours and dining reservations to transportation arrangements.</p>
-      <p>Our user-friendly platform empowers you to craft detailed itineraries effortlessly. Whether you're a solo adventurer, couple on a romantic getaway, or planning a family vacation, our intuitive interface accommodates your travel style.</p>
-    
+       <!-- about tab -->
+      <section id="about">
+      <h2 class="is-size-2 subtitle">Are you ready to take your travel experience to the next level?</h2>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-5">
+            <p class="has-text-weight-bold">At Seamless, we are passionate about making travel dreams come true. With a team of experienced travel experts and a commitment to providing exceptional service, we are here to take your travel experiences to the next level.</p>
+            <br>Every traveler is unique, and so are your interests. Customize your itinerary with precision, from sightseeing tours and dining reservations to transportation arrangements.
+              Our user-friendly platform empowers you to craft detailed itineraries effortlessly. Whether you're a solo adventurer, couple on a romantic getaway, or planning a family vacation, our intuitive interface accommodates your travel style.</p>
+              
+            </div>
+          <div>
+            <img src="Assets/images/phone-logo.png" alt="app photo" class="px=6">
+          </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
 
-    <!-- Destinations Section -->
-    <section id="Destinations" class="section is-medium" class="container my-5 mt-5 mx-5 px-5">
+    <!-- Destinations tab -->
+    <section id="Destinations"  class="is-hidden section is-medium container my-5 mt-5 mx-5 px-5">
       <h2  class="title is-2 is-capitalized">Destinations</h2>
       <div class="field has-addons">
         <div class="control is-expanded">
@@ -103,8 +117,8 @@
         </div>
     </section>
 
-    <!-- Hotels section -->
-    <section id="Hotels"  class="section is-medium" class="container my-5 mt-5 mx-5 px-5">
+    <!-- Hotels tab -->
+    <section id="Hotels"  class="is-hidden section is-medium container my-5 mt-5 mx-5 px-5">
       <h2 class="title is-2 is-capitalized">Hotels</h2>
       <button onclick="fetchHotels()">Search</button>
 <div id="results"></div>
@@ -116,10 +130,17 @@
     </section>
 
 
+    <!-- Acivities tab-->
+    <div id="Activities" class="is-hidden section is-medium container my-5 mt-5 mx-5 px-5">
+      <h2 class="title is-2 is-capitalized">Activities</h2>
+    </div>
 
-    <!-- Contact us Section -->
-    <div class="container my-5 mt-5 mx-5 px-5"  class="section is-medium">
-      <h2 class="title is-2 is-capitalized" id="Contact">Contact Us</h2>
+
+
+
+    <!-- Contact us tab -->
+    <div id="Contact" class="is-hidden section is-medium container my-5 mt-5 mx-5 px-5">
+      <h2 class="title is-2 is-capitalized" >Contact Us</h2>
 
       <form action="" method="post">
           <div class="field">
@@ -149,7 +170,9 @@
           <button type="submit" class="button is-link is-light is-size-10">Submit</button>
       </form>
   </div>
-</section>
+    </section>
+
+  
 
 
 

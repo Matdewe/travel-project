@@ -1,11 +1,6 @@
-const fetchHotels = () => {
-  // gets user input
-  const userInput = document.querySelector("#userQuery").value;
-
-
-
-const url =
-  "https://hotels4.p.rapidapi.com/locations/v3/search?q=United%20States&locale=en_US&langid=1033&siteid=300000001";
+fetchData();
+async function fetchData() {
+const url = "https://hotels4.p.rapidapi.com/locations/v3/search?q=United%20States&locale=en_US&langid=1033&siteid=300000001";
 const options = {
   method: "GET",
   headers: {
@@ -14,19 +9,15 @@ const options = {
   },
 };
 
-fetch("https://hotels4.p.rapidapi.com", options)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Need to be fixed");
-    }
-    return response.json();
-  })
-  .then((data) => {
-    const resultsDiv = document.querySelector("#results");
-    resultsDiv.innerHTML = JSON.stringify(data);
-    console.log(data);
-  })
+try {
+  const response = await fetch(url , options);
+  const result = await response.text();
 
-  .catch((error) => console.error("Error", error));
+const data = JSON.parse(result);
 
-};
+console.log(data);
+} catch(error) {
+console.error(error);
+
+}
+} fetchData();

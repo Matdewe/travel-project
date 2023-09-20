@@ -20,17 +20,24 @@
           <a class="navbar-item has-text-weight-bold is-italic" href="#Home">
             SeamLess
           </a>
-          <span class="navbar-burger burger" data-target="navbarMenu">
+          <span class="navbar-burger burger" data-target="navbarMenu" id="burger">
             <span></span>
             <span></span>
             <span></span>
           </span>
         </div>
-        <div id="navMenu" class="navbar-menu" id="nav-links">
+        <div id="navMenu" class="navbar-menu">
           <div class="navbar-end">
             <a href="#Home" class="navbar-item is-active">About Us</a>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                More
+              </a>
+      
+              <div class="navbar-dropdown">
             <a href="#Hotels" class="navbar-item">Hotels</a>
             <a href="#Destinations" class="navbar-item">Destination</a>
+            <a href="#Destinations" class="navbar-item">Activities</a>
             <a href="#Contact" class="navbar-item">Contact Us</a>
           </div>
 
@@ -39,7 +46,7 @@
     </nav>
 
 
-        <!-- slogan / brand -->
+        <!-- slogan / brand picture -->
     <figure style="object-fit: cover;">
       <img src="Assets/images/large-logo.png" alt="slogan">
     </figure>
@@ -50,7 +57,7 @@
     <div class="tabs is-centered is-boxed">
       <ul>
         <li class="is-active"><a>About </a></li>
-        <li><a>Destinations</a></li>
+        <li><a>Destination</a></li>
         <li><a>Hotels</a></li>
         <li><a>Activites</a></li>
         <li><a>Contact</a></li>
@@ -147,7 +154,8 @@
 
     <script src="/Assets/script.js"></script>
     <script src="./Assets/js/yelpApiScript.js"></script>
-        <script src="/Assets/js/hotel.js"></script>
+      <script src="/Assets/js/hotel.js"></script>
+      <script src="/Assets/js/bulma.js"></script>
 
 
   </body>

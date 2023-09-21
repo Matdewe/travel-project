@@ -102,6 +102,34 @@
       <img src="" alt="" />
     </section>
 
+     <!-- Currency Exchange Section -->
+     <section id="Currency-Exchange-Div" class="section is-medium" class="container my-5 mt-5 mx-5 px-5">
+      <h2 class="title is-2 is-capitalized">Currency Exchange</h2>
+      <div class="mb-5">
+        <label class="label" for="amount"  >Amount:</label>
+        <input id="amount" class="input is-info" type="number" value="100">
+      </div>
+
+    <div class="is-justify-content-space-between">
+        <div class="select is-medium">
+            <select id="from-currency-select" >
+            <!--options added with js-->
+            </select>
+        </div>
+
+        <div class="select is-medium">
+            <select id="to-currency-select">
+            <!--options added with js-->
+            </select>
+         </div>
+    </div>
+
+    <div class="mt-5">
+        <button id="convert-button" class="button has-background-link has-text-white" class="block">Convert</button>
+        <p id="result" class="is-size-4"></p>
+    </div>
+    </section>
+
 
     <!-- Destinations tab -->
     <section id="Destinations"  class="is-hidden section is-medium container my-5 mt-5 mx-5 px-5">

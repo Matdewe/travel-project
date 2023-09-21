@@ -1,91 +1,126 @@
-
 <!DOCTYPE html>
 <html lang="en" class="has-navbar-fixed-top">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <title>Travel Project</title>
-  </head>
-  <body>
-    <nav>
-      <div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <title>Travel Project</title>
+</head>
+
+<body>
+  <!-- Navigation bar. including brand name and 'About Us' shortcut -->
+  <nav class="navbar is-black is-fixed-top">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item has-text-weight-bold is-italic" href="#Home">
+          SeamLess Booking
+        </a>
       </div>
-
-      <div>
-        <div>
-          <!--Nav Bar -->
-    <nav class="navbar is-black is-fixed-top" >
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item has-text-weight-bold is-italic" href="#Home">
-            SeamLess
-          </a>
-          <span class="navbar-burger burger" data-target="navbarMenu" id="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a href="#about" id="about-shortcut" class="navbar-item is-active">About Us</a>
         </div>
-        <div id="navMenu" class="navbar-menu">
-          <div class="navbar-end">
-            <a href="#tab-content" class="navbar-item is-active">About Us</a>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                More
-              </a>
-      
-              <div class="navbar-dropdown">
-            <a href="#Hotels" class="navbar-item">Hotels</a>
-            <a href="#Destinations" class="navbar-item">Destination</a>
-            <a href="#Activities" class="navbar-item">Activities</a>
-            <a href="#Contact" class="navbar-item">Contact Us</a>
-          </div>
+  </nav>
 
-        </div>
-      </div>
-    </nav>
+  <!-- slogan / brand picture -->
+  <figure style="object-fit: cover;">
+    <img src="Assets/images/large-logo.png" alt="slogan">
+  </figure>
 
+  <!-- Tab Bar -->
+  <div class="tabs is-centered is-boxed">
+    <ul>
+      <li data-target="about" class="about-button"><a>About </a></li>
+      <li data-target="hotels" class="hotels-button"><a>Hotel</a></li>
+      <li data-target="city-image-search" class="city-viewer-button"><a>City Viewer</a></li>
+    </ul>
+  </div>
 
-        <!-- slogan / brand picture -->
-    <figure style="object-fit: cover;">
-      <img src="Assets/images/large-logo.png" alt="slogan">
-    </figure>
+  <!-- each tab content Section -->
+  <section id="tab-content" class="section is-small" class="container my-5 mt-5 mx-5 px-5">
 
-
-    
-     <!-- Tab Bar -->
-    <div class="tabs is-centered is-boxed">
-      <ul>
-        <li data-target="About" class="is-active"><a>About </a></li>
-        <li data-target="Destinations"><a>Destination</a></li>
-        <li data-target="Hotels"><a>Hotels</a></li>
-        <li data-target="Activities"><a>Activites</a></li>
-        <li data-target="Contact"><a>Contact</a></li>
-      </ul>
-    </div>
-
-     <!-- each tab content Section -->
-    <section id="tab-content" class="section is-small" class="container my-5 mt-5 mx-5 px-5" >
-      
-      
-       <!-- about tab -->
-      <section id="about">
+    <!-- About Us tab -->
+    <section id="about" class="is-active">
       <h2 class="is-size-2 subtitle">Are you ready to take your travel experience to the next level?</h2>
       <div class="container">
         <div class="columns">
           <div class="column is-5">
-            <p class="has-text-weight-bold">At Seamless, we are passionate about making travel dreams come true. With a team of experienced travel experts and a commitment to providing exceptional service, we are here to take your travel experiences to the next level.</p>
-            <br>Every traveler is unique, and so are your interests. Customize your itinerary with precision, from sightseeing tours and dining reservations to transportation arrangements.
-              Our user-friendly platform empowers you to craft detailed itineraries effortlessly. Whether you're a solo adventurer, couple on a romantic getaway, or planning a family vacation, our intuitive interface accommodates your travel style.</p>
-              
-            </div>
+            <h4 class="has-text-weight-bold">Welcome to our travel haven! At Seamless Booking, we're passionate about
+              helping you explore and experience the beauty of cities around the world. </h4>
+            <p>Whether you're planning a weekend getaway or an extended vacation, our platform allows you to discover
+              the perfect hotel for your stay in any city you desire. We don't stop there; we've curated a collection of
+              three
+              <br>captivating pictures that capture the essence and allure of your chosen destination. Your journey
+              begins here, with us.
+            </p>
+          </div>
           <div>
             <img src="Assets/images/phone-logo.png" alt="app photo" class="px=6">
           </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Hotel search&Result tab -->
+    <section id="hotels" class="is-hidden section is-medium container my-5 mt-5 mx-5 px-5">
+      <div class="container">
+        <h1 class="title">Where shall the adventure begin?</h1>
+
+        <!-- City Input Field -->
+        <div class="field">
+          <label class="label">City</label>
+          <div class="control">
+            <input class="input" type="text" id="city-input" placeholder="Enter city name">
+          </div>
+        </div>
+
+        <!-- Country Input Field -->
+        <div class="field">
+          <label class="label">Country</label>
+          <div class="control">
+            <input class="input" type="text" id="country-input" placeholder="Enter country name">
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="field">
+          <div class="control">
+            <button class="button is-primary" id="submitBtn">Submit</button>
+          </div>
+        </div>
+
+        <div id="hotelContainer">
+          <!-- Hotel information will be displayed here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- City Viewer Tab (image search) -->
+    <section id="city-image-search" class="section is-hidden">
+      <div class="container">
+        <h1 class="title">City Image Search</h1>
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label" for="cityInput">Please input a City and Country:</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <!-- City input feild -->
+                <input class="input mb-4" type="text" id="cityInput" placeholder="e.g., New York">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <!-- Search Button -->
+                <button class="button is-primary" id="searchBtn">Search</button>
+              </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
 
@@ -162,14 +197,17 @@
         <div class="control">
           <button type="submit" class="button is-link">Choose</button>
         </div>
+=======
+        <!-- Where image results will be displayed -->
+        <div id="imageResults"></div>
+      </div>
+>>>>>>> 8890fac63b96949130976e170dced71f755c4ca9
     </section>
 
-    <!-- Hotels tab -->
-    <section id="Hotels"  class="is-hidden section is-medium container my-5 mt-5 mx-5 px-5">
-      <h2 class="title is-2 is-capitalized">Hotels</h2>
-      <button onclick="fetchHotels()">Search</button>
-<div id="results"></div>
+    <script src="./Assets/js/images.js"></script>
+    <script src="./Assets/js/Booking.js"></script>
 
+<<<<<<< HEAD
       <!-- <p>text</p>
       <p>text</p>
       <img src="image goes here" alt="" />
@@ -232,3 +270,7 @@
 
   </body>
 </html> 
+=======
+</body>
+</html>
+>>>>>>> 8890fac63b96949130976e170dced71f755c4ca9

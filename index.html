@@ -1,18 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en" class="has-navbar-fixed-top">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./Assets/css/style.css">
     <title>Travel Project</title>
   </head>
   <body>
     <nav>
       <div>
+      </div>
+
+      <div>
         <div>
           <!--Nav Bar -->
-    <nav class="navbar is-black is-fixed-top is-link" >
+    <nav class="navbar is-black is-fixed-top" >
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item has-text-weight-bold is-italic" href="#Home">
@@ -41,10 +44,13 @@
 
         </div>
       </div>
-    </nav> 
+    </nav>
 
 
         <!-- slogan / brand picture -->
+    <figure style="object-fit: cover;">
+      <img src="Assets/images/large-logo.png" alt="slogan">
+    </figure>
 
 
     
@@ -158,9 +164,8 @@
         </div>
     </section>
 
-    <!-- Hotels section -->
-    <section id="Hotels"  class="section is-medium" class="container my-5 mt-5 mx-5 px-5">
-
+    <!-- Hotels tab -->
+    <section id="Hotels"  class="is-hidden section is-medium container my-5 mt-5 mx-5 px-5">
       <h2 class="title is-2 is-capitalized">Hotels</h2>
       <button onclick="fetchHotels()">Search</button>
 <div id="results"></div>
@@ -172,11 +177,13 @@
     </section>
 
 
-
     <!-- Acivities tab-->
     <div id="Activities" class="is-hidden section is-medium container my-5 mt-5 mx-5 px-5">
       <h2 class="title is-2 is-capitalized">Activities</h2>
     </div>
+
+
+
 
     <!-- Contact us tab -->
     <div id="Contact" class="is-hidden section is-medium container my-5 mt-5 mx-5 px-5">
@@ -216,7 +223,7 @@
 
 
 
-    <script src="./Assets/js/script.js"></script>
+    <script src="/Assets/script.js"></script>
     <script src="./Assets/js/yelpApiScript.js"></script>
       <script src="/Assets/js/hotel.js"></script>
       <script src="/Assets/js/bulma.js"></script>

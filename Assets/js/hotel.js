@@ -1,3 +1,11 @@
+/* USER GOAL: As a user I want to be able to search for a hotel that meet 
+*/
+
+
+
+
+
+
 const fetchHotels = () => {
   // gets user input const userInput = document.querySelector("#userQuery").value;
 

@@ -130,3 +130,23 @@ currencies = [
     {name: "Zambia", currency: "ZMW"},
     {name: "Zimbabwe", currency: "ZWL"},
 ];
+
+// Adding options to From Currency Dropdown Menu
+for (var i = 0; i < currencies.length; i++) {
+    var option = document.createElement("option");
+    option.text = currencies[i].name;
+    option.value = currencies[i].currency;
+    fromDropDown.add(option);
+};
+
+// Adding options for To Currency Dropdown Menu
+for (var i = 0; i < currencies.length; i++) {
+    var option = document.createElement("option");
+    option.text = currencies[i].name;
+    option.value = currencies[i].currency;
+    toDropDown.add(option);
+};
+
+// Default values
+fromDropDown.value = "USD";
+toDropDown.value = "INR";

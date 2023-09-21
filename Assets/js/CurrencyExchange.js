@@ -150,3 +150,35 @@ for (var i = 0; i < currencies.length; i++) {
 // Default values
 fromDropDown.value = "USD";
 toDropDown.value = "INR";
+
+// Function to convert exchange rate
+let convertCurrency = () => {
+	const amount = document.querySelector("#amount").value; // references amount
+	const fromCurrency = fromDropDown.value; // gets value of from dropdown menu
+	const toCurrency = toDropDown.value; // gets value of to dropdown menu
+
+	//If amount input field is not empty
+	if (amount.length != 0) {
+        fetch(apiURL)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Need to be fixed");
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                let fromExchangeRate = data.conversion_rates[fromCurrency]; // variable to hold rate of user selection of From Dropdown menu
+                let toExchangeRate = data.conversion_rates[toCurrency]; // variable to hold rate of user selection of To Dropdown Menu
+                const convertedAmount = (amount / fromExchangeRate) * toExchangeRate; // variable that holds formula to calculate converted amount
+                result.innerHTML = `${amount} ${fromCurrency} = ${convertedAmount.toFixed(2)} ${toCurrency}`;; // display converted amount in html
+            })
+            .catch( 
+                error => console.error("Error", error)
+            );
+    }
+  };
+
+document
+	.querySelector("#convert-button")
+	.addEventListener("click", convertCurrency);

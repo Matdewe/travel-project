@@ -1,11 +1,5 @@
 # travel-project
 
-<<<<<<< HEAD
-
-## Description
-=======
-
->>>>>>> fceaf7834cf6f851162ffc064378e4b8b672e3d0
 At Seamless Booking, we're passionate about helping travelers like you create unforgettable journeys with ease and efficiency. Say goodbye to the days of scrambling through multiple tabs, endless spreadsheets, and sticky notes – we've simplified the art of travel planning.
 
 ##  Table of Contents 

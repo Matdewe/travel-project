@@ -34,7 +34,7 @@
       <li data-target="about" class="about-button"><a>About </a></li>
       <li data-target="hotels" class="hotels-button"><a>Hotel</a></li>
       <li data-target="city-image-search" class="city-viewer-button"><a>City Viewer</a></li>
-      <li data-target="currency-exchange" class="currency-exchange"><a>Currency Exchange</a></li>
+      <li data-target="currency-exchange" class="currency-exchange-button"><a>Currency Exchange</a></li>
     </ul>
   </div>
 
@@ -127,17 +127,19 @@
     </section>
 
     <!-- Currency Exchange -->
-    <section id="currency-exchange" class="select" class="is-hidden">
+    <section id="currency-exchange" class="is-hidden">
         <h1 class="title">Currency Exchange</h1>
+        <!-- Amount user wants to convert-->
         <label for="amount">Amount:</label>
         <input class="input" type="number" id="amount" value="100">
+        <!-- Countries they can convert currencies from and to-->
         <div class="dropdowns" class="select is-info">
           <select id="from-currency-select" class="mb-5 mt-5"></select>
           <select id="to-currency-select" class="mb-5"></select>
         </div>
         <button id="convert-button" class="button is-info">Convert</button>
+        <!-- Result displayed -->
         <p id="result" class="is-size-4"></p>
-      </div>
     </section>
 
   </section>

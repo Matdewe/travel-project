@@ -125,8 +125,24 @@
       </div>
     </section>
 
+    <!-- Currency Exchange -->
+    <section class="select" class="section is-hidden">
+      <div>
+        <h1 class="title">Currency Exchange</h1>
+        <label for="amount">Amount:</label>
+        <input class="input" type="number" id="amount" value="100">
+        <div class="dropdowns" class="select is-info">
+          <select id="from-currency-select"></select>
+          <select id="to-currency-select"></select>
+        </div>
+        <button id="convert-button" class="button is-info">Convert</button>
+        <p id="result"></p>
+      </div>
+    </section>
+
     <script src="./Assets/js/images.js"></script>
     <script src="./Assets/js/Booking.js"></script>
+    <script src="./Assets/js/CurrencyExchange.js"></script>
 
 </body>
 </html>

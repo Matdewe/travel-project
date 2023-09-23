@@ -1,3 +1,4 @@
+const variable = "hello";
 // These are the bits of code underneath the tabs and nav bar
 const hotels = document.getElementById("hotels");
 const about = document.getElementById("about");
@@ -64,7 +65,7 @@ function displayValues() {
     fetchData(city, country)
 }
 
-/* Declaring an asynchronous function to fetch the API date.
+/* Declaring an asynchronous function to fetch the API data.
   An asynchronous operation means that a process operates 
   independently of other processes. SUNCHronous code will execute from
   the top to the bottom, but the ASYNCHronous code will start at the

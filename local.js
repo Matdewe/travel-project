@@ -15,12 +15,12 @@ function saveToStorage(e) {
         return;
     }
     // due to there being a button 
-    // prevents DOM from refreshing
+    // this will prevent DOM from refreshing
     e.preventDefault()
     var city = cityEl.value.trim()
     var country = countryEl.value.trim()
     //creating object
-    // putting value together uder one object 
+    // putting value together under one object 
     var travelSearch = {  
         city:city, 
         country:country
@@ -28,7 +28,7 @@ function saveToStorage(e) {
     //pushing an object into an array
     // this will create a list of objects 
     // this happens when there is more than one 
-    // when there is a "".method" read code right to left 
+    // (lightbulb!) when there is a "".method" read code right to left 
     searchArr.push(travelSearch)
     console.log(searchArr)
     localStorage.setItem("hotel", JSON.stringify(searchArr))
@@ -42,11 +42,32 @@ function saveToStorage(e) {
 // in the logic of the for loop i am solving for one display at a time. 
 // 
 
+
 function getSavedData() {
+// Rettrieving data from local storage
+var localStorageData = localStorage.getItem("hotel");
+// Redefine as an array using parse 
+var dataArray = JSON.parse(localStorageData);
+// now the array data can be utilized in a loop. 
+dataArray.forEach(item => {
+    console.log (item)
+    displayData(item);
+});
 
 }
 
+function displayData(item) {
+    var dataDisplay = document.getElementById("displaySaved");
+    var newItem = document.createElement("p");
+    newItem.textContent = "City: " + item.city + ". Country: " + item.country;
+    dataDisplay.appendChild(newItem);
+}
+getSavedData();
 // 1. get local storage 
-// 2. redefine as an array - can now be used in for loop
+// 2. redefine as an array - can now be used in loop
 // 3. display it - (look through it) - for loop ( make sure to console.log)
 // How to display from js to html - resource. 
+
+var cityInput = document.getElementById("city-input");
+var countryInput = document.getElementById("country-input");
+var citySuggestionBox = document.getElementById()

@@ -97,7 +97,8 @@ const fetchData = async (city, country) => {
     const apiKey = '97c6814f89msh82fc6cce03210eep142519jsn89da5134b4ae'; // this API has a limit of 10 requests per day
     const cityName = city;
     const countryName = country;
-    const url = 'https://best-booking-com-hotel.p.rapid.com/booking/best-accomodation?cityName=${cityName}&countryName=${countryName}`;
+    const url = 'https://best-booking-com-hotel.p.rapidapi.com/booking/best-accomodation?cityName=${cityName}&countryName=${countryName}`;
+
 
     try {
         const response = await fetch(url, {

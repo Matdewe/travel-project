@@ -66,7 +66,7 @@ getSavedData();
 var citySuggestionBox = document.getElementById("suggestionBox1");
 var countrySuggestionBox = document.getElementById("suggestionBox2");
 
-// Listen dor input changes in the city and country inputys 
+// Listen dor input changes in the city and country inputs 
 cityEl.addEventListener("input", function() {
     updateSuggestions(cityEl, citySuggestionBox);
 });
@@ -77,21 +77,31 @@ countryEl.addEventListener("input", function() {
 
 
 function updateSuggestions(inputElement, citySuggestionBox) {
+    // Convert user input to lowercase for case-insensitive matching
     var searchString = inputElement.value.toLowerCase();
 
+    // Iterate through the data array to find marching suggestions
     dataArray.forEach(item => {
+        // Convert city and country names to lowercase for comparison
         var city = item.city.toLowerCase();
         var country = item.country.toLowerCase();
 
+        // Check if the user input matches the city or country 
         if (city.includes(searchString) || country.includes(searchString)) {
+            //Create a new suggestion
             var suggestion = document.createElement("div");
             suggestion.classList.add("suggestion");
 
+            // Add a click event listener to handle suggestion selections
             suggestion.addEventListener("click", function() {
+                //Set the input field value to the selected city and country
               inputElement.value = item.city + ", " + item.country;
+              // Clear the suggestion box 
                 citySuggestionBox.innerHTML = "";
+                // Hide the suggestion box 
                 citySuggestionBox.style.display = "none";
             });
+            // Append the suggestion to the suggestion box 
             citySuggestionBox.appendChild(suggestion);
         }
     })

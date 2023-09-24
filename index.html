@@ -82,6 +82,7 @@
           <label class="label">Country</label>
           <div class="control">
             <input class="input" type="text" id="country-input" placeholder="Enter country name">
+            <div id="suggestionBox2" class="suggestion-box"></div>
           </div>
         </div>
 
@@ -94,6 +95,7 @@
 
         <div id="hotelContainer">
           <!-- Hotel information will be displayed here -->
+          <ul id="displaySaved"></ul>
         </div>
       </div>
     </section>
@@ -111,6 +113,7 @@
               <div class="control">
                 <!-- City input feild -->
                 <input class="input mb-4" type="text" id="cityInput" placeholder="e.g., New York">
+                <div id="suggestionBox1" class="suggestion-box"></div>
               </div>
             </div>
             <div class="field">
@@ -150,7 +153,11 @@
   </section>
     <script src="./Assets/js/images.js"></script>
     <script src="./Assets/js/Booking.js"></script>
+
+    <script src="./Assets/js/local.js"></script>
+
     <script src="./Assets/js/CurrencyExchange.js"></script>
+
 
 
 </body>

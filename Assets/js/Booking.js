@@ -94,17 +94,17 @@ function displayValues() {
   top and execute until it hits something that is asynchronous, and
   then it will execute that and the regular code at the exact same time*/
 const fetchData = async (city, country) => {
-    const apiKey = 'API-KEY'; // this API has a limit of 10 requests per day
+    const apiKey = '97c6814f89msh82fc6cce03210eep142519jsn89da5134b4ae'; // this API has a limit of 10 requests per day
     const cityName = city;
     const countryName = country;
-    const url = `https://best-booking-com-hotel.p.rapidapi.com/booking/best-accommodation?cityName=${cityName}&countryName=${countryName}`;
+    const url = '';
 
     try {
         const response = await fetch(url, {
             method: 'GET',
             headers: {
                 'X-RapidAPI-Key': apiKey,
-                'X-RapidAPI-Host': 'best-booking-com-hotel.p.rapidapi.com'
+                'X-RapidAPI-Host': 'booking-com.p.rapidapi.com'
             }
         });
         /*  If we do not get a good response back from the network, we are throwing an error

@@ -4,17 +4,20 @@ const hotels = document.getElementById("hotels");
 const about = document.getElementById("about");
 const aboutShortcut = document.getElementById('about-shortcut');
 const cityPictureSearch = document.getElementById('city-image-search');
+const currencyExchange = document.getElementById('currency-exchange');
 
 /* This is the query selector for the tabs/buttons*/
 const aboutButton = document.querySelector(".about-button");
 const hotelsButton = document.querySelector(".hotels-button");
 const cityViewerButton = document.querySelector('.city-viewer-button');
+const currencyExchangeButton = document.querySelector('.currency-exchange-button');
 
 // These are the event listeners for the buttons^ 
 aboutShortcut.addEventListener('click', toggleAbout);
 aboutButton.addEventListener('click', toggleAbout);
 hotelsButton.addEventListener('click', toggleHotels);
 cityViewerButton.addEventListener('click', toggleViewer);
+currencyExchangeButton.addEventListener('click', toggleCurrency);
 
 //Function to be called when the 'City Viewer" tab is clicked on
 // In this we ensure all content besides the viewer content is hidden
@@ -22,7 +25,9 @@ function toggleViewer() {
     hotels.classList.remove('is-active');
     hotels.classList.add('is-hidden')
     about.classList.remove('is-active');
-    about.classList.add('is-hidden')
+    about.classList.add('is-hidden');
+    currencyExchange.classList.remove('is-active');
+    currencyExchange.classList.add('is-hidden');
     cityPictureSearch.classList.remove('is-hidden');
     cityPictureSearch.classList.add('is-active');
 }
@@ -33,6 +38,8 @@ function toggleAbout() {
     hotels.classList.add('is-hidden')
     cityPictureSearch.classList.remove('is-active');
     cityPictureSearch.classList.add('is-hidden');
+    currencyExchange.classList.remove('is-active');
+    currencyExchange.classList.add('is-hidden');
     about.classList.remove('is-hidden');
     about.classList.add('is-active');
 }
@@ -43,8 +50,23 @@ function toggleHotels() {
     about.classList.add('is-hidden')
     cityPictureSearch.classList.remove('is-active');
     cityPictureSearch.classList.add('is-hidden');
+    currencyExchange.classList.remove('is-active');
+    currencyExchange.classList.add('is-hidden');
     hotels.classList.remove('is-hidden');
     hotels.classList.add('is-active');
+}
+
+//Function to be called when the 'Currency Exchange' tab is clicked on
+// In this we ensure all content besides the Currency Exchange content is hidden
+function toggleCurrency() {
+    about.classList.remove('is-active');
+    about.classList.add('is-hidden')
+    cityPictureSearch.classList.remove('is-active');
+    cityPictureSearch.classList.add('is-hidden');
+    hotels.classList.remove('is-active');
+    hotels.classList.add('is-hidden');
+    currencyExchange.classList.remove('is-hidden');
+    currencyExchange.classList.add('is-active');
 }
 
 // These are the values within the section for Hotel search

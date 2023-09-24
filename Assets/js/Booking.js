@@ -23,7 +23,7 @@ currencyExchangeButton.addEventListener('click', toggleCurrency);
 // In this we ensure all content besides the viewer content is hidden
 function toggleViewer() {
     hotels.classList.remove('is-active');
-    hotels.classList.add('is-hidden')
+    hotels.classList.add('is-hidden');
     about.classList.remove('is-active');
     about.classList.add('is-hidden');
     currencyExchange.classList.remove('is-active');
@@ -35,7 +35,7 @@ function toggleViewer() {
 // In this we ensure all content besides the About Us content is hidden
 function toggleAbout() {
     hotels.classList.remove('is-active');
-    hotels.classList.add('is-hidden')
+    hotels.classList.add('is-hidden');
     cityPictureSearch.classList.remove('is-active');
     cityPictureSearch.classList.add('is-hidden');
     currencyExchange.classList.remove('is-active');
@@ -47,7 +47,7 @@ function toggleAbout() {
 // In this we ensure all content besides the Hotel content is hidden
 function toggleHotels() {
     about.classList.remove('is-active');
-    about.classList.add('is-hidden')
+    about.classList.add('is-hidden');
     cityPictureSearch.classList.remove('is-active');
     cityPictureSearch.classList.add('is-hidden');
     currencyExchange.classList.remove('is-active');
@@ -60,7 +60,7 @@ function toggleHotels() {
 // In this we ensure all content besides the Currency Exchange content is hidden
 function toggleCurrency() {
     about.classList.remove('is-active');
-    about.classList.add('is-hidden')
+    about.classList.add('is-hidden');
     cityPictureSearch.classList.remove('is-active');
     cityPictureSearch.classList.add('is-hidden');
     hotels.classList.remove('is-active');

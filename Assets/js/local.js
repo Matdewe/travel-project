@@ -51,23 +51,51 @@ var dataArray = JSON.parse(localStorageData);
 // now the array data can be utilized in a loop. 
 dataArray.forEach(item => {
     console.log (item)
-    displayData(item);
 });
 
 }
 
-function displayData(item) {
-    var dataDisplay = document.getElementById("displaySaved");
-    var newItem = document.createElement("p");
-    newItem.textContent = "City: " + item.city + ". Country: " + item.country;
-    dataDisplay.appendChild(newItem);
-}
 getSavedData();
 // 1. get local storage 
 // 2. redefine as an array - can now be used in loop
 // 3. display it - (look through it) - for loop ( make sure to console.log)
 // How to display from js to html - resource. 
 
-var cityInput = document.getElementById("city-input");
-var countryInput = document.getElementById("country-input");
-var citySuggestionBox = document.getElementById()
+
+// refrences to the input fields and suggestion boxes 
+var citySuggestionBox = document.getElementById("suggestionBox1");
+var countrySuggestionBox = document.getElementById("suggestionBox2");
+
+// Listen dor input changes in the city and country inputys 
+cityEl.addEventListener("input", function() {
+    updateSuggestions(cityEl, citySuggestionBox);
+});
+
+countryEl.addEventListener("input", function() {
+    updateSuggestions(countryEl, countrySuggestionBox);
+});
+
+
+function updateSuggestions(inputElement, citySuggestionBox) {
+    var searchString = inputElement.value.toLowerCase();
+
+    dataArray.forEach(item => {
+        var city = item.city.toLowerCase();
+        var country = item.country.toLowerCase();
+
+        if (city.includes(searchString) || country.includes(searchString)) {
+            var suggestion = document.createElement("div");
+            suggestion.classList.add("suggestion");
+
+            suggestion.addEventListener("click", function() {
+              inputElement.value = item.city + ", " + item.country;
+                citySuggestionBox.innerHTML = "";
+                citySuggestionBox.style.display = "none";
+            });
+            citySuggestionBox.appendChild(suggestion);
+        }
+    })
+}
+
+
+

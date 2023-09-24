@@ -97,14 +97,14 @@ const fetchData = async (city, country) => {
     const apiKey = '97c6814f89msh82fc6cce03210eep142519jsn89da5134b4ae'; // this API has a limit of 10 requests per day
     const cityName = city;
     const countryName = country;
-    const url = '';
+    const url = 'https://best-booking-com-hotel.p.rapid.com/booking/best-accomodation?cityName=${cityName}&countryName=${countryName}`;
 
     try {
         const response = await fetch(url, {
             method: 'GET',
             headers: {
                 'X-RapidAPI-Key': apiKey,
-                'X-RapidAPI-Host': 'booking-com.p.rapidapi.com'
+                'X-RapidAPI-Host': 'best-booking-com-hotel.p.repidapi.com'
             }
         });
         /*  If we do not get a good response back from the network, we are throwing an error

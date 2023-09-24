@@ -1,4 +1,6 @@
-let apiURL = 'https://v6.exchangerate-api.com/v6/d0f23fda988537aea298cd57/latest/USD' //api url
+let apiURL = 'https://cors-anywhere.herokuapp.com/https://v6.exchangerate-api.com/v6/d0f23fda988537aea298cd57/latest/USD';
+
+// let apiURL = 'https://v6.exchangerate-api.com/v6/d0f23fda988537aea298cd57/latest/USD' //api url
 // initializing variables
 const fromDropDown = document.querySelector("#from-currency-select");
 const toDropDown = document.querySelector("#to-currency-select");
@@ -151,6 +153,8 @@ for (var i = 0; i < currencies.length; i++) {
 fromDropDown.value = "USD";
 toDropDown.value = "INR";
 
+// const result = document.querySelector("#result");  megan added this whilst playing around
+
 // Function to convert exchange rate
 let convertCurrency = () => {
 	const amount = document.querySelector("#amount").value; // references amount
@@ -162,7 +166,8 @@ let convertCurrency = () => {
         fetch(apiURL)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error("Need to be fixed");
+                    return Promise.reject("Network Response was not good");
+                    // throw new Error("Need to be fixed");
                 }
                 return response.json();
             })

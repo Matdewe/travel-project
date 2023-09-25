@@ -1,19 +1,17 @@
-# travel-project
+# Seamless Booking - Travel Project
 
 
 At Seamless Booking, we're passionate about helping travelers like you create unforgettable journeys with ease and efficiency. Say goodbye to the days of scrambling through multiple tabs, endless spreadsheets, and sticky notes – we've simplified the art of travel planning.
 
 ##  Table of Contents 
 
-- [User Story](#UserStory)
-- [Description](#Description)
+- [User Story](#user-story)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Startup and Installation](#startup-and-installation)
 - [Screenshot](#screenshot)
-- [Customization](#Customization)
-- [Resources](#resources)
-- [License](#license)
+- [Review](#review)
+- [Sources](#sources)
 
 
 ## User Story
@@ -38,6 +36,12 @@ SO THAT I can plan a trip accordingly
 
 - HTML5
 - CSS
+- Bulma CSS Framework
+- Javascript
+- LocalStorage
+- Best Booking.com API
+- Pixabay Image search API
+- Herokuapp Currency Exchange API
 
 ## Startup and Installation
 
@@ -53,9 +57,25 @@ cd Travel-Project
 
 Open index.html
 
-## Screenshot
+------------
+As a user of the site, from the deployed page, no installation is required. As long as user has connection to stable inernet they will be able to interact with the site completely. 
 
-![](assets/images/demo.png) 
+## Screenshots
+
+Landing Screen
+![Landing Screen](./Assets/images/landing-screen.png)
+
+Hotel Search
+![Hotel Search](./Assets/images/hotel-search.png)
+
+City Viewer
+![City Image Search](./Assets/images/image-search.png)
+
+Currency Exchange
+![Currency Exchange](./Assets/images/currency-exchange.png)
+
+Presentation Demo Slide
+![Demo Image](assets/images/demo.png) 
 
 
 ## Review 
@@ -77,35 +97,11 @@ Open index.html
 
 * Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id-naming conventions, indentation, quality comments, etc.).
 
-* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
-
-## Customization
-
-add and change whats needed for the following html and css needs. 
-
-## Resources  
-
-https://www.youtube.com/watch?v=NFToND6x_nI
-
-## License
-=======
-
-
-## Review
-* Use a CSS framework other than Bootstrap.
-* Be deployed to GitHub Pages.
-* Be interactive (i.e: accept and respond to user input).
-* Use at least two server-side APIs.
-* Does not use alerts, confirms, or prompts (use modals).
-* Use client-side storage to store persistent data.
-* Be responsive.
-* Have a polished UI.
-* Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id-naming conventions, indentation, quality comments, etc.).
-* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
-* add your project to the portfolio that you created in Module 2.
-=========
+* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application). 
 
 ## Sources
+
+* https://www.youtube.com/watch?v=NFToND6x_nI
 * https://www.youtube.com/watch?v=I6nuWeylMYM
 * https://bulma.io/documentation/overview/modifiers/
 * https://bulma.io/documentation/components/navbar/
@@ -115,5 +111,5 @@ https://www.youtube.com/watch?v=NFToND6x_nI
 * https://looka.com/editor/149032190 (logo creator)
 * https://www.exchangerate-api.com/ 
 (Note: Exchange rates might not be 100% accurate. Value received with API shows a difference of 0-15 cents compared to Google)
-
-
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+* https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement

@@ -20,8 +20,9 @@ At Seamless Booking, we're passionate about helping travelers like you create un
 
 ```
 AS A traveler
-I WANT to see the ...
-I WANT to see a list of activities for a vacation
+I WANT to see the information about a city.
+I WANT to see hotels within the city.
+I WANT to see a currency exchanger.
 SO THAT I can plan a trip accordingly
 ```
 

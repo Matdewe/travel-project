@@ -49,8 +49,12 @@ var localStorageData = localStorage.getItem("hotel");
 // Redefine as an array using parse 
 var dataArray = JSON.parse(localStorageData);
 // now the array data can be utilized in a loop. 
+var displayData = document.getElementById("displaySaved");
+
+// Loop thrpuhg the data array and display each item 
 dataArray.forEach(item => {
     console.log (item)
+    displayDataOnPage(item, displayData);
 });
 
 }
@@ -62,21 +66,18 @@ getSavedData();
 // How to display from js to html - resource. 
 
 
-// refrences to the input fields and suggestion boxes 
-var citySuggestionBox = document.getElementById("suggestionBox1");
-var countrySuggestionBox = document.getElementById("suggestionBox2");
+function displayDataOnPage(item) {
+    var dataDisplay = document.getElementById("displaySaved");
+    var newItem = document.createElement("p");
+    newItem.textContent = "City: " + item.city + ", Country: " + item.country;
+    dataDisplay.appendChild(newItem);
+}
 
-// Listen dor input changes in the city and country inputs 
-cityEl.addEventListener("input", function() {
-    updateSuggestions(cityEl, citySuggestionBox);
-});
-
-countryEl.addEventListener("input", function() {
-    updateSuggestions(countryEl, countrySuggestionBox);
-});
+// Call the getSavedData function to retrieve and display the data 
+getSavedData();
 
 
-function updateSuggestions(inputElement, citySuggestionBox) {
+/*function updateSuggestions(inputElement, citySuggestionBox) {
     // Convert user input to lowercase for case-insensitive matching
     var searchString = inputElement.value.toLowerCase();
 
@@ -105,7 +106,7 @@ function updateSuggestions(inputElement, citySuggestionBox) {
             citySuggestionBox.appendChild(suggestion);
         }
     })
-}
+}*/
 
 
 

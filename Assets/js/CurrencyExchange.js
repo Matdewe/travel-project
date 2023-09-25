@@ -1,6 +1,4 @@
-let apiURL = 'https://cors-anywhere.herokuapp.com/https://v6.exchangerate-api.com/v6/d0f23fda988537aea298cd57/latest/USD';
-
-// let apiURL = 'https://v6.exchangerate-api.com/v6/d0f23fda988537aea298cd57/latest/USD' //api url
+let apiURL = 'https://v6.exchangerate-api.com/v6/d0f23fda988537aea298cd57/latest/USD' //api url
 // initializing variables
 const fromDropDown = document.querySelector("#from-currency-select");
 const toDropDown = document.querySelector("#to-currency-select");

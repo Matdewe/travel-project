@@ -133,7 +133,8 @@ const fetchData = async (city, country) => {
             hotelNameElement.href = data.link;
             // Set the hotel name
             hotelNameElement.textContent = data.name;
-            // Open link in a new tab
+            // Intructing browser to open new link in the brower 
+            //    This is going to be the booking.com link for the hotel
             hotelNameElement.target = '_blank';
 
             // Creating <p> where content of the rating for the hotel will be displayed

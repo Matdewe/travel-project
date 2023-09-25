@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
   <title>Travel Project</title>
 </head>
 
@@ -34,6 +35,7 @@
       <li data-target="about" class="about-button"><a>About </a></li>
       <li data-target="hotels" class="hotels-button"><a>Hotel</a></li>
       <li data-target="city-image-search" class="city-viewer-button"><a>City Viewer</a></li>
+      <li data-target="currency-exchange" class="currency-exchange-button"><a>Currency Exchange</a></li>
     </ul>
   </div>
 
@@ -89,10 +91,10 @@
           <div class="control">
             <button class="button is-primary" id="submitBtn">Submit</button>
           </div>
-        </div>
 
-        <div id="hotelContainer">
+        <div id="hotelContainer" class="show2"><p>Recent Searches</p>
           <!-- Hotel information will be displayed here -->
+          <ul id="displaySaved"></ul>
         </div>
       </div>
     </section>
@@ -120,13 +122,40 @@
             </div>
           </div>
         </div>
+        <div id="hotelContainer" class="show2"><p>Recent Searches</p>
+          <!-- Hotel information will be displayed here -->
+          <ul id="displaySaved"></ul>
+        </div>
+
+
         <!-- Where image results will be displayed -->
         <div id="imageResults"></div>
       </div>
     </section>
 
+    <!-- Currency Exchange -->
+    <section id="currency-exchange" class="is-hidden">
+      <h1 class="title">Currency Exchange</h1>
+      <!-- Amount user wants to convert-->
+      <label for="amount">Amount:</label>
+      <input class="input" type="number" id="amount" value="100">
+      <!-- Countries they can convert currencies from and to-->
+      <div class="dropdowns" class="select is-info">
+        <select id="from-currency-select" class="mb-5 mt-5"></select>
+        <select id="to-currency-select" class="mb-5"></select>
+      </div>
+      <button id="convert-button" class="button is-info">Convert</button>
+      <!-- Result displayed -->
+      <p id="result" class="is-size-4"></p>
+    </section>
+
     <script src="./Assets/js/images.js"></script>
     <script src="./Assets/js/Booking.js"></script>
+    <script src="./Assets/js/local.js"></script>
+    <script src="./Assets/js/CurrencyExchange.js"></script>
+
+
 
 </body>
+
 </html>

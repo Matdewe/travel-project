@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+console.log(variable);
 
     // These are the bits of code underneath the tabs and nav bar
     const hotels = document.getElementById("hotels");

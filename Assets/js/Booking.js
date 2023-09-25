@@ -1,27 +1,33 @@
+const variable = "hello";
 // These are the bits of code underneath the tabs and nav bar
 const hotels = document.getElementById("hotels");
 const about = document.getElementById("about");
 const aboutShortcut = document.getElementById('about-shortcut');
 const cityPictureSearch = document.getElementById('city-image-search');
+const currencyExchange = document.getElementById('currency-exchange');
 
 /* This is the query selector for the tabs/buttons*/
 const aboutButton = document.querySelector(".about-button");
 const hotelsButton = document.querySelector(".hotels-button");
 const cityViewerButton = document.querySelector('.city-viewer-button');
+const currencyExchangeButton = document.querySelector('.currency-exchange-button');
 
 // These are the event listeners for the buttons^ 
 aboutShortcut.addEventListener('click', toggleAbout);
 aboutButton.addEventListener('click', toggleAbout);
 hotelsButton.addEventListener('click', toggleHotels);
 cityViewerButton.addEventListener('click', toggleViewer);
+currencyExchangeButton.addEventListener('click', toggleCurrency);
 
 //Function to be called when the 'City Viewer" tab is clicked on
 // In this we ensure all content besides the viewer content is hidden
 function toggleViewer() {
     hotels.classList.remove('is-active');
-    hotels.classList.add('is-hidden')
+    hotels.classList.add('is-hidden');
     about.classList.remove('is-active');
-    about.classList.add('is-hidden')
+    about.classList.add('is-hidden');
+    currencyExchange.classList.remove('is-active');
+    currencyExchange.classList.add('is-hidden');
     cityPictureSearch.classList.remove('is-hidden');
     cityPictureSearch.classList.add('is-active');
 }
@@ -29,9 +35,11 @@ function toggleViewer() {
 // In this we ensure all content besides the About Us content is hidden
 function toggleAbout() {
     hotels.classList.remove('is-active');
-    hotels.classList.add('is-hidden')
+    hotels.classList.add('is-hidden');
     cityPictureSearch.classList.remove('is-active');
     cityPictureSearch.classList.add('is-hidden');
+    currencyExchange.classList.remove('is-active');
+    currencyExchange.classList.add('is-hidden');
     about.classList.remove('is-hidden');
     about.classList.add('is-active');
 }
@@ -39,11 +47,26 @@ function toggleAbout() {
 // In this we ensure all content besides the Hotel content is hidden
 function toggleHotels() {
     about.classList.remove('is-active');
-    about.classList.add('is-hidden')
+    about.classList.add('is-hidden');
     cityPictureSearch.classList.remove('is-active');
     cityPictureSearch.classList.add('is-hidden');
+    currencyExchange.classList.remove('is-active');
+    currencyExchange.classList.add('is-hidden');
     hotels.classList.remove('is-hidden');
     hotels.classList.add('is-active');
+}
+
+//Function to be called when the 'Currency Exchange' tab is clicked on
+// In this we ensure all content besides the Currency Exchange content is hidden
+function toggleCurrency() {
+    about.classList.remove('is-active');
+    about.classList.add('is-hidden');
+    cityPictureSearch.classList.remove('is-active');
+    cityPictureSearch.classList.add('is-hidden');
+    hotels.classList.remove('is-active');
+    hotels.classList.add('is-hidden');
+    currencyExchange.classList.remove('is-hidden');
+    currencyExchange.classList.add('is-active');
 }
 
 // These are the values within the section for Hotel search
@@ -64,24 +87,26 @@ function displayValues() {
     fetchData(city, country)
 }
 
-/* Declaring an asynchronous function to fetch the API date.
+/* Declaring an asynchronous function to fetch the API data.
   An asynchronous operation means that a process operates 
   independently of other processes. SUNCHronous code will execute from
   the top to the bottom, but the ASYNCHronous code will start at the
   top and execute until it hits something that is asynchronous, and
   then it will execute that and the regular code at the exact same time*/
 const fetchData = async (city, country) => {
-    const apiKey = 'API-KEY'; // this API has a limit of 10 requests per day
+    const apiKey = '97c6814f89msh82fc6cce03210eep142519jsn89da5134b4ae'; // this API has a limit of 10 requests per day
     const cityName = city;
     const countryName = country;
     const url = `https://best-booking-com-hotel.p.rapidapi.com/booking/best-accommodation?cityName=${cityName}&countryName=${countryName}`;
+
+
 
     try {
         const response = await fetch(url, {
             method: 'GET',
             headers: {
                 'X-RapidAPI-Key': apiKey,
-                'X-RapidAPI-Host': 'best-booking-com-hotel.p.rapidapi.com'
+                'X-RapidAPI-Host': 'best-booking-com-hotel.p.repidapi.com'
             }
         });
         /*  If we do not get a good response back from the network, we are throwing an error
@@ -108,7 +133,8 @@ const fetchData = async (city, country) => {
             hotelNameElement.href = data.link;
             // Set the hotel name
             hotelNameElement.textContent = data.name;
-            // Open link in a new tab
+            // Intructing browser to open new link in the brower 
+            //    This is going to be the booking.com link for the hotel
             hotelNameElement.target = '_blank';
 
             // Creating <p> where content of the rating for the hotel will be displayed

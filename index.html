@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
   <title>Travel Project</title>
 </head>
 
@@ -82,7 +83,6 @@
           <label class="label">Country</label>
           <div class="control">
             <input class="input" type="text" id="country-input" placeholder="Enter country name">
-            <div id="suggestionBox2" class="suggestion-box"></div>
           </div>
         </div>
 
@@ -91,9 +91,8 @@
           <div class="control">
             <button class="button is-primary" id="submitBtn">Submit</button>
           </div>
-        </div>
 
-        <div id="hotelContainer">
+        <div id="hotelContainer" class="show2"><p>Recent Searches</p>
           <!-- Hotel information will be displayed here -->
           <ul id="displaySaved"></ul>
         </div>
@@ -113,7 +112,6 @@
               <div class="control">
                 <!-- City input feild -->
                 <input class="input mb-4" type="text" id="cityInput" placeholder="e.g., New York">
-                <div id="suggestionBox1" class="suggestion-box"></div>
               </div>
             </div>
             <div class="field">
@@ -124,6 +122,12 @@
             </div>
           </div>
         </div>
+        <div id="hotelContainer" class="show2"><p>Recent Searches</p>
+          <!-- Hotel information will be displayed here -->
+          <ul id="displaySaved"></ul>
+        </div>
+
+
         <!-- Where image results will be displayed -->
         <div id="imageResults"></div>
       </div>

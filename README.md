@@ -55,7 +55,7 @@ Open index.html
 
 ## Screenshot
 
-Screenshot goes here 
+![](assets/images/demo.png) 
 
 
 ## Review 

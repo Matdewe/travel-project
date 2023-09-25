@@ -1,7 +1,6 @@
 // Creating global variables targeting the input
-// City Input 
 var cityEl = document.getElementById('city-input');
-// Country input 
+// country input 
 var countryEl = document.getElementById("country-input");
 // button 
 var submitBtn = document.getElementById("submitBtn");
@@ -25,6 +24,8 @@ function saveToStorage(e) {
         city:city, 
         country:country
     }
+    // Check if the search already exists in the array 
+    var exists = searchArr.some(item => item.city === city && item.country === country);
     //pushing an object into an array
     // this will create a list of objects 
     // this happens when there is more than one 
@@ -40,7 +41,7 @@ function saveToStorage(e) {
 
 // get local storage data, data type is an array therefore have to use a for loop to process,
 // in the logic of the for loop i am solving for one display at a time. 
-// 
+
 
 
 function getSavedData() {
@@ -60,53 +61,22 @@ dataArray.forEach(item => {
 }
 
 getSavedData();
-// 1. get local storage 
-// 2. redefine as an array - can now be used in loop
-// 3. display it - (look through it) - for loop ( make sure to console.log)
-// How to display from js to html - resource. 
 
-
+// This function will display the saved data on the page 
 function displayDataOnPage(item) {
+    //Get the element where you want to display the data by its designated ID
     var dataDisplay = document.getElementById("displaySaved");
+    //Create a new paragraph element to hold the data 
     var newItem = document.createElement("p");
+    // Set the text content of the paragraph to display the city and country 
     newItem.textContent = "City: " + item.city + ", Country: " + item.country;
+    // Append the new paragraph to the dataDisplay element, adding it to the page.
     dataDisplay.appendChild(newItem);
 }
 
 // Call the getSavedData function to retrieve and display the data 
 getSavedData();
 
-
-/*function updateSuggestions(inputElement, citySuggestionBox) {
-    // Convert user input to lowercase for case-insensitive matching
-    var searchString = inputElement.value.toLowerCase();
-
-    // Iterate through the data array to find marching suggestions
-    dataArray.forEach(item => {
-        // Convert city and country names to lowercase for comparison
-        var city = item.city.toLowerCase();
-        var country = item.country.toLowerCase();
-
-        // Check if the user input matches the city or country 
-        if (city.includes(searchString) || country.includes(searchString)) {
-            //Create a new suggestion
-            var suggestion = document.createElement("div");
-            suggestion.classList.add("suggestion");
-
-            // Add a click event listener to handle suggestion selections
-            suggestion.addEventListener("click", function() {
-                //Set the input field value to the selected city and country
-              inputElement.value = item.city + ", " + item.country;
-              // Clear the suggestion box 
-                citySuggestionBox.innerHTML = "";
-                // Hide the suggestion box 
-                citySuggestionBox.style.display = "none";
-            });
-            // Append the suggestion to the suggestion box 
-            citySuggestionBox.appendChild(suggestion);
-        }
-    })
-}*/
 
 
 

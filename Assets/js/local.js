@@ -26,6 +26,13 @@ function saveToStorage(e) {
     }
     // Check if the search already exists in the array 
     var exists = searchArr.some(item => item.city === city && item.country === country);
+
+    if (!exists) {
+        var travelSearch = {
+            city: city,
+            country: country
+        };
+    }
     //pushing an object into an array
     // this will create a list of objects 
     // this happens when there is more than one 
@@ -51,7 +58,6 @@ var localStorageData = localStorage.getItem("hotel");
 var dataArray = JSON.parse(localStorageData);
 // now the array data can be utilized in a loop. 
 var displayData = document.getElementById("displaySaved");
-
 // Loop thrpuhg the data array and display each item 
 dataArray.forEach(item => {
     console.log (item)
@@ -59,8 +65,6 @@ dataArray.forEach(item => {
 });
 
 }
-
-getSavedData();
 
 // This function will display the saved data on the page 
 function displayDataOnPage(item) {
